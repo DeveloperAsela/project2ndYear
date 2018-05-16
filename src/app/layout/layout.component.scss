@@ -1,0 +1,67 @@
+.main-container {
+    //margin-top: 56px;
+    //margin-left: 235px;
+    margin-bottom: 56px;
+    padding: 15px;
+    -ms-overflow-x: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
+    overflow: hidden;
+}
+@media screen and (max-width: 992px) {
+    .main-container {
+        margin-left: 0px !important;
+    }
+}
+
+
+.navbar-header {
+    margin-left: 10px;
+  }
+  
+  .sidenav-container {
+    
+  }
+  
+  .sidenav-container mat-sidenav {
+    max-width: 200px;
+  }
+  
+  .sidenav-container .mat-sidenav-content,
+  .sidenav-container mat-sidenav {
+    display: flex;
+    overflow: visible;
+  }
+  
+  .scrolling-content {
+    overflow: auto;
+    height: 100%;
+   
+  }
+  
+  .fill-remaining-space {
+   
+    flex: 1 1 auto;
+  }
+  
+  mat-sidenav {
+    width: 200px;
+  }
+  
+  .side-nav-list{
+    width:200px;
+  }
+  
+  .side-nav-list mat-list-item {
+    cursor: pointer;
+    z-index: 30;
+  }
+  
+  .toolbar {
+    position: fixed;
+    top: 0
+  }
+  .sub-color1{
+    background: rgb(151, 71, 226);
+  }

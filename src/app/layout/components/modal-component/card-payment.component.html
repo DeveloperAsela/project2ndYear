@@ -1,0 +1,95 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="row">
+            <h3 class="text-center">Payment Details</h3>
+            <img class="img-responsive cc-img" src="http://www.prepbootstrap.com/Content/images/shared/misc/creditcardicons.png">
+        </div>
+    </div>
+    <div class="panel-body">
+
+    <ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <h4 class="modal-title">Payment Succeeded</h4>
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>{{key}}&hellip;</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="YourConfirmEvent()">Download</button>
+    </div>
+  </ng-template>
+  
+  <!-- <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button> -->
+  
+  <hr>
+  
+  <pre>{{closeResult}}</pre>
+
+
+        <form role="form">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group padding-left-13" >
+                        <label>CARD NUMBER</label>
+                        <div class="input-group">
+                            <input type="tel" class="form-control" placeholder="Valid Card Number" />
+                            <span class="input-group-addon"><span class="fa fa-credit-card"></span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-7 col-md-7">
+                    <div class="form-group">
+                        <label><span class="hidden-xs">EXPIRATION</span><span class="visible-xs-inline">EXP</span> DATE</label>
+                        <input type="tel" class="form-control" placeholder="MM / YY" />
+                    </div>
+                </div>
+                <div class="col-xs-5 col-md-5 pull-right">
+                    <div class="form-group ">
+                        <label>CV CODE</label>
+                        <input type="tel" class="form-control" placeholder="CVC" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group padding-left-13">
+                        <label>CARD OWNER</label>
+                        <input type="text" class="form-control" placeholder="Card Owner Names" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="panel-footer">
+        <div class="row">
+            <div class="col-xs-12 padding-left-13">
+                <!-- <button class="btn btn-warning btn-lg btn-block " (click)="addPayment()">Process payment</button> -->
+              <button class="btn btn-warning btn-lg btn-block " (click)="open(content)">Process payment</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<style>
+        .cc-img {
+            margin: 0 auto;
+            width:580px;
+            height:90px;
+        }
+        .padding-left-13{
+            padding-left:13px;
+        }
+        </style>
+ 
+      

@@ -1,0 +1,12 @@
+
+     .user-avatar {
+         -webkit-border-radius: 20%;
+         border-radius: 20%;
+         border: 2px solid #fff;
+     }
+      .form-group {
+         padding: 8px 0;
+         input::-webkit-input-placeholder {
+             color: rgba(255, 255, 255, 0.6) !important;
+         }
+        }

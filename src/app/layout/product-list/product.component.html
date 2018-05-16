@@ -1,0 +1,81 @@
+<div class="row">
+    <div class="col-md-12" style="margin-bottom: 20px;">
+        <mat-card>
+            <div class="col-md-12">
+
+
+                <button mat-raised-button color="primary" (click)="openAddProductPanel()">Add Product</button>
+                <button mat-raised-button color="primary" (click)="openAddUserPanel()">Add User</button>
+                <!-- <button mat-raised-button color="primary">Primary</button>
+                <button mat-raised-button color="primary">Primary</button> -->
+                <!-- <mat-icon>add_shopping_cart</mat-icon> -->
+            </div>
+
+            <!-- <div class="col-md-8" style="float: right;">
+                    <mat-form-field style="width:100%;">
+                        <input matInput placeholder="Search" name="balance">
+                    </mat-form-field>
+                </div> -->
+        </mat-card>
+    </div>
+
+    <div class="col-md-3">
+        <ul class="list-group">
+            <li class="list-group-item justify-content-between" style="background-color: rgb(216, 214, 214)">
+                Categories
+            </li>
+            <li class="list-group-item justify-content-between category-item" (click)="setAll()">
+                All
+                <span class="badge badge-default badge-pill ">{{productList.length}}</span>
+            </li>
+            <li class="list-group-item justify-content-between category-item" *ngFor="let category of categoryList" (click)="filterProject(category)">
+                {{category[0].Type}}
+                <span class="badge badge-default badge-pill ">{{category.length}}</span>
+            </li>
+        </ul>
+        <br/>
+        <mat-card *ngIf="viewAddPanel">
+            <h2 style="text-align: center">Add Product</h2>
+            <br/>
+        </mat-card>
+    </div>
+    <div class="col-md-9">
+        <!-- <div class="row">
+            <div class="col-md-6" style="margin-left:20px;">
+                <mat-form-field style="width:100%;">
+                    <input matInput placeholder="Search" name="balance">
+                </mat-form-field>
+            </div>
+            <div class="col-md-4" style="float: left;margin-top: 14px;">
+                <button mat-mini-fab color="primary">
+                    <mat-icon>search</mat-icon>
+                </button>
+            </div>
+        </div> -->
+        <div class="row">
+            <div class="col-md-3" *ngFor="let product of viewProductList">
+                <mat-card class="product-card">
+                    <img mat-card-image class="img-responsive product-image" style="padding: 5px;" [src]="productImage">
+                    <mat-card-content style="bottom: 2px;">
+                        <p style="color:blue;font-family: 'Times New Roman', Times, serif;font-size: 15px;" >{{product.Name}}</p>
+                        <p>
+                            {{product.Type}}
+                        </p>
+                        <p>Price: {{product.Price_in___for_12_months}}</p>
+                        <div>
+                            <span class="product-grid__btn product-grid__view" (click)="openViewProductPanel(product)">
+                                <i class="fa fa-eye"></i> View more</span>
+                            <button mat-mini-fab color="primary" class="pull-right" (click)="addToCart(product)">
+                                <mat-icon>add_shopping_cart</mat-icon>
+                            </button>
+                        </div>
+                        <!-- <span class="product-grid__btn product-grid__add-to-cart" (click)="addToCart(product)">
+                                            <i class="fa fa-cart-arrow-down"></i> Add to cart</span>
+                                        <span class="product-grid__btn product-grid__view" (click)="selectProduct(product)">
+                                            <i class="fa fa-eye"></i> View more</span> -->
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

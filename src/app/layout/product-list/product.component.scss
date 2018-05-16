@@ -1,0 +1,67 @@
+$title-color: #222;
+$font-color: #777;
+$light-gray: #eee;
+$primary: rgb(171, 97, 241);
+$secondary: #42A5F5;
+.container {
+    padding: 2px 16px;
+}
+
+.product-card {
+    height: 308px;
+    line-height: 5px;
+    margin-bottom: 15px;
+}
+
+.product-image {
+    height: 165px;
+}
+
+.list-group {}
+
+.badge {
+    float: right;
+}
+
+.category-item {
+    cursor: pointer;
+}
+
+.product-grid {
+    width: 60em;
+    margin: 2rem auto; // TODO: apply clearfix
+    // If want a flexbox grid.
+    &.product-grid--flexbox {
+        .product-grid__wrapper {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .product-grid__title {
+            height: auto;
+            &:after {
+                display: none;
+            }
+        }
+    }
+    &__btn {
+        display: inline-block;
+        font-size: .875em;
+        color: $font-color;
+        background: $light-gray;
+        padding: .5em .625em;
+        margin-top: .875rem;
+        margin-right: .625rem;
+        cursor: pointer;
+        border-radius: 4px;
+        i.fa {
+            margin-right: .3125rem;
+        }
+    }
+    &__view {
+        color: $font-color;
+        background: $light-gray;
+        &:hover {
+            background: lighten($light-gray, 10%);
+        }
+    }
+}

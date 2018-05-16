@@ -1,0 +1,58 @@
+<mat-toolbar color="primary" class="main-color ">
+    <!-- fixed-top -->
+<mat-icon (click)="sidenav.toggle()">reorder</mat-icon>
+    <span class="navbar-header"> QUADRO Software Solutions</span>
+
+    <span class="fill-remaining-space"></span>
+    <mat-icon class="example-icon" style="padding-right: 50px;cursor: pointer;" routerLink="/cart">shopping_cart</mat-icon>
+    <span>{{user}}</span>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>keyboard_arrow_down</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu" style="  margin-top: 55px;">
+        <button mat-menu-item (click)="logout()">
+            <mat-icon>power_settings_new</mat-icon>
+            <span>Log Out</span>
+        </button>
+        <button mat-menu-item>
+            <mat-icon>person</mat-icon>
+            <span>View Profile</span>
+        </button>
+
+    </mat-menu>
+
+</mat-toolbar>
+
+<div class="scrolling-content">
+    <section class="main-container">
+        <router-outlet></router-outlet>
+    </section>
+</div>
+<!-- <app-header></app-header> -->
+<!-- <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav mode="side" opened="this.logiService.isLoggedIn" class="sub-color1">
+        <div class="scrolling-content">
+            <mat-list class="side-nav-list" dense>
+                <h3 mat-subheader>Dashboard</h3>
+
+                <mat-divider></mat-divider>
+
+                <mat-list-item routerLink="dashboard" (click)="v(m1)" >
+                    <mat-icon matListIcon>payment</mat-icon>Dashboard
+                </mat-list-item>
+
+
+
+            </mat-list>
+        </div>
+    </mat-sidenav>
+
+    <div class="scrolling-content">
+        <section class="main-container">
+            <router-outlet></router-outlet>
+        </section>
+    </div>
+
+</mat-sidenav-container> -->
+
+<app-sidebar></app-sidebar>

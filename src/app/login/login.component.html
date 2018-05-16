@@ -1,0 +1,29 @@
+<div class="login-page" [@routerTransition]>
+    <div class="row">
+        <div class="col-md-4 push-md-4">
+            <mat-card style="margin-top: 25px;">
+                <img src="assets/images/logo.png" width="200px" class="user-avatar" />
+                <h1>Quadro Solutions</h1>
+                <form #form="ngForm" role="form">
+                    <div class="form-content">
+                        <div class="form-group">User Name:
+                            <input type="text" [(ngModel)]="username" (keyup)="keyUp()" name="Email" class="form-control input-underline input-lg"
+                                placeholder="User name">
+                        </div>
+                        <div class="form-group">Password:
+                            <input type="password" [(ngModel)]="password" (keyup)="keyUp()" name="Password" class="form-control input-underline input-lg"
+                                id="" placeholder="Password">
+                        </div>
+                        <div *ngIf="msgShow">
+                            <h4 style="color:red;font-family: 'Times New Roman', Times, serif">{{errorMsg}}</h4>
+                        </div>
+                    </div>
+                    <!-- <a class="btn rounded-btn" (click)="onLoggedin(form)"> Log in </a> -->
+                    <button mat-raised-button color="primary" class="pull-center" (click)="onLoggedin(form)">Log in</button>
+
+                    <button mat-raised-button  (click)="signup()">Register Now</button>
+                </form>
+            </mat-card>
+        </div>
+    </div>
+</div>

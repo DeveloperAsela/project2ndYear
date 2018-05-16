@@ -1,0 +1,43 @@
+<div class="login-page" [@routerTransition]>
+    <div class="row">
+        <div class="col-md-5 push-md-4">
+            <mat-card style="margin-top: 25px;">
+                <img src="assets/images/logo.png" width="200px" class="user-avatar" />
+                <h1>Quadro Solutions</h1>
+                <form #form="ngForm" role="form" (ngSubmit)="register(form)">
+                    <div class="form-content row">
+                        <div class="form-group col-md-6">First Name:
+                            <input type="text" name="Fname" class="form-control input-underline input-lg"
+                                placeholder="Full Name" ngModel>
+                        </div>
+                        <div class="form-group col-md-6">Last Name:
+                            <input type="text" name="Lname" class="form-control input-underline input-lg"
+                                placeholder="Full Name" ngModel>
+                        </div>
+                        <div class="form-group col-md-8">Email:
+                            <input type="text" name="Email"  class="form-control input-underline input-lg"
+                                placeholder="Email" ngModel>
+                        </div>
+                        <!-- <div class="form-group col-md-6" >Role:
+                                <input type="text" name="role" class="form-control input-underline input-lg" [(ngModel)]="roles[1].viewValue" readonly>
+                        </div> -->
+                        <div class="form-group col-md-6">Password:
+                            <input type="password" name="Password" class="form-control input-underline input-lg"
+                                 placeholder="Password" >
+                        </div>
+                        <div class="form-group col-md-6">Confirm Password:
+                                <input type="password"  name="confirmPassword" class="form-control input-underline input-lg"
+                                     placeholder="Confirm Password">
+                            </div>
+                        <div *ngIf="msgShow">
+                            <h4 style="color:red;font-family: 'Times New Roman', Times, serif">{{errorMsg}}</h4>
+                        </div>
+                    </div>
+                   
+                    <button mat-raised-button color="primary" class="pull-center" type="submit">Register</button>
+
+                </form>
+            </mat-card>
+        </div>
+    </div>
+</div>

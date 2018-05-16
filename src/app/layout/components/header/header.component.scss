@@ -1,0 +1,51 @@
+$topnav-background-color: rgb(255, 255, 255);
+:host {
+    .navbar {
+        background-color: $topnav-background-color;
+        
+        .navbar-brand {
+            margin: 5px;
+            margin-top: 5px;
+            color: rgb(253, 60, 60);
+            font-family: 'Gill Sans';
+            font-size: 20px;
+            font-weight: 500;
+            border: 2px;
+            height: 25px;
+        }
+        .nav-item > a {
+            color: rgb(24, 209, 8);
+            &:hover {
+                color: rgb(231, 8, 64);
+            }
+        }
+    }
+    .messages {
+        width: 300px;
+        .media {
+            border-bottom: 1px solid rgb(64, 3, 100);
+            padding: 5px 10px;
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+        .media-body {
+            h5 {
+                font-size: 13px;
+                font-weight: 600;
+            }
+            .small {
+                margin: 0;
+            }
+            .last {
+                font-size: 12px;
+                margin: 0;
+            }
+        }
+    }
+    .hr{
+    width: 5px;
+    color: black;
+}
+}
+
